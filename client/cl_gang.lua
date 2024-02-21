@@ -224,6 +224,12 @@ end)
 
 CreateThread(function()
     if Config.UseTarget then
+        if Config.ShowGangBlip then
+            for _, gangMenu in pairs(Config.GangBlipsMenus) do
+                print(json.encode(gangMenu))
+                CreateBlip(gangMenu.label, gangMenu.coords)
+            end
+        end
         for gang, zones in pairs(Config.GangMenuZones) do
             for index, data in ipairs(zones) do
                 exports['qb-target']:AddBoxZone(gang .. '-GangMenu' .. index, data.coords, data.length, data.width, {

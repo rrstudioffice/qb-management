@@ -174,10 +174,14 @@ RegisterNetEvent('qb-bossmenu:client:ManageEmployee', function(data)
 end)
 
 RegisterNetEvent('qb-bossmenu:client:Stash', function()
-    TriggerServerEvent('inventory:server:OpenInventory', 'stash', 'boss_' .. PlayerJob.name, {
+    exports['qb-inventory']:OpenInventory( 'stash', 'boss_' .. PlayerJob.name, {
         maxweight = 4000000,
         slots = 25,
     })
+    -- TriggerServerEvent('inventory:server:OpenInventory', 'stash', 'boss_' .. PlayerJob.name, {
+    --     maxweight = 4000000,
+    --     slots = 25,
+    -- })
     TriggerEvent('inventory:client:SetCurrentStash', 'boss_' .. PlayerJob.name)
 end)
 
