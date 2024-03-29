@@ -227,7 +227,7 @@ CreateThread(function()
         if Config.ShowGangBlip then
             for _, gangMenu in pairs(Config.GangBlipsMenus) do
                 print(json.encode(gangMenu))
-                CreateBlip(gangMenu.label, gangMenu.coords)
+                CreateBlip(gangMenu.label, gangMenu.coords, gangMenu.color)
             end
         end
         for gang, zones in pairs(Config.GangMenuZones) do

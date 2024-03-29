@@ -19,16 +19,15 @@ function deepcopy(orig, copies)
     return copy
 end
 
-function CreateBlip(gang, coords)
+function CreateBlip(gang, coords, color)
     local blip = AddBlipForCoord(coords.x, coords.y, coords.z)
     SetBlipSprite(blip, Config.SpriteGangBlip)
     SetBlipDisplay(blip, 4)
-    SetBlipScale(blip, 0.7)
-    SetBlipColour(blip, 1)
+    SetBlipScale(blip, 0.8)
+    SetBlipColour(blip, color)
     SetBlipAsShortRange(blip, true)
     BeginTextCommandSetBlipName("STRING")
     AddTextComponentSubstringPlayerName(gang or 'Nenhum título fornecido')
     EndTextCommandSetBlipName(blip)
     return blip
 end
-
