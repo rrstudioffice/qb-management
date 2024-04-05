@@ -21,7 +21,7 @@ Config.BossMenus = {
     -- ['mechanic3'] = { vector3(-339.53, -156.44, 44.59) },
     ['bennys'] = { vector3(-195.56, -1316.45, 31.11) },
     ['pizzeria'] = { vector3(797.08, -751.57, 31.07) },
-    ['news'] = { vector3(-576.92, -937.61, 28.62) },
+    ['reporter'] = { vector3(-576.92, -937.61, 28.62) },
     ['radio'] = { vector3(-576.92, -937.61, 28.62) },
     ['loanshark'] = { vector3(484.49, -1536.05, 29.11) },
     ['netcat'] = { vector3(119.48, -1969.87, 21.08) },
@@ -29,7 +29,7 @@ Config.BossMenus = {
 }
 
 Config.BossMenuZones = {
-    ['news'] = {
+    ['reporter'] = {
         { coords = vector3(-576.92, -937.61, 28.62), length = 1.15, width = 1.6, heading = 48.03, minZ = 27.62, maxZ = 29.62 }
     },
     ['radio'] = {
@@ -39,7 +39,9 @@ Config.BossMenuZones = {
         { coords = vector3(-535.92, -186.45, 43.36), length = 1.35, width = 1.45, heading = 30.2348, minZ = 43.00, maxZ = 43.73 }
     },
     ['police'] = {
-        { coords = vector3(461.46, -986.17, 30.64), length = 1.35, width = 1.45, heading = 171.8, minZ = 30.00, maxZ = 31.73 }
+        -- MLO GABZ
+        -- { coords = vector3(461.46, -986.17, 30.64), length = 1.35, width = 1.45, heading = 171.8, minZ = 30.00, maxZ = 31.73 }
+        { coords = vector3(447.23, -974.3, 31.47), length = 1.35, width = 1.45, heading = 351.0, minZ = 30.00, maxZ = 31.73 }
     },
     ['ambulance'] = {
         { coords = vector3(335.59, -594.33, 43.21), length = 1.2, width = 0.6, heading = 269.85, minZ = 41.53, maxZ = 45.33 }
@@ -120,33 +122,73 @@ Config.GangMenus = {
 
 Config.GangMenuZones = {
     elite = {
-        { coords = vector3(-1369.3569, -626.2334, 30.3584), length = 1.35, width = 1.45, heading = 54.3993, minZ = 30.00, maxZ = 31.73 }
+        {
+            coords = vector3(-1369.3569, -626.2334, 30.3584),
+            heading = 54.3993,
+            length = 1,
+            width = 1,
+            minZ = 30.00,
+            maxZ = 31.73
+        },
+        {
+            coords = vector3(-115.83, 981.42, 227.88),
+            heading = 205.21,
+            length = 1,
+            width = 1,
+            minZ = 226,
+            maxZ = 228
+        },
+        {
+            coords = vector3(977.15, -104.66, 74.61),
+            heading = 222.65,
+            length = 1,
+            width = 1,
+            minZ = 73.61,
+            maxZ = 74.61
+        },
+        {
+            coords = vector3(404.54, 802.26, 200.17),
+            heading = 12.62,
+            length = 1,
+            width = 1,
+            minZ = 199.17,
+            maxZ = 201.17
+        }
     },
     grota = { -- GABZ
         {
             coords = vector3(0.94, -1809.82, 28.95),
-            length = 1,
-            width = 1,
             heading = 270,
             minZ = 28.35,
+            length = 1,
+            width = 1,
             maxZ = 29
         },
         {
             coords = vector3(119.48, -1969.87, 21.08),
-            length = 1,
-            width = 1,
             heading = 230,
             minZ = 20.08,
+            length = 1,
+            width = 1,
             maxZ = 22.08
         },
         {
             coords = vector3(337.57, -1980.69, 24.0),
+            heading = 111,
             length = 1,
             width = 1,
-            heading = 111,
             minZ = 23,
             maxZ = 25
         },
+        {
+            coords = vector3(-132.15, -1609.17, 34.83),
+            heading = 242.17,
+            length = 1,
+            width = 1,
+            minZ = 33.83,
+            maxZ = 34.83
+        },
+
     }
 }
 -- @todo Não existirá metas das gangs
